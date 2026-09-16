@@ -1,27 +1,22 @@
 #include <stdio.h>
 
 int main() {
+    int a[10][10], b[10][10], sum[10][10];
     int rows, cols, i, j;
 
-    printf("Enter the number of rows: ");
-    scanf("%d", &rows);
-    printf("Enter the number of columns: ");
-    scanf("%d", &cols);
+    printf("Enter rows and columns: ");
+    scanf("%d %d", &rows, &cols);
 
-    int a[rows][cols], b[rows][cols], sum[rows][cols];
-
-    printf("\nEnter elements of Matrix A:\n");
+    printf("Enter elements of first matrix:\n");
     for (i = 0; i < rows; i++) {
         for (j = 0; j < cols; j++) {
-            printf("A[%d][%d]: ", i, j);
             scanf("%d", &a[i][j]);
         }
     }
 
-    printf("\nEnter elements of Matrix B:\n");
+    printf("Enter elements of second matrix:\n");
     for (i = 0; i < rows; i++) {
         for (j = 0; j < cols; j++) {
-            printf("B[%d][%d]: ", i, j);
             scanf("%d", &b[i][j]);
         }
     }
@@ -32,12 +27,12 @@ int main() {
         }
     }
 
-    printf("\nSum of the two matrices (Matrix A + Matrix B):\n");
+    printf("Sum of two matrices:\n");
     for (i = 0; i < rows; i++) {
         for (j = 0; j < cols; j++) {
-            printf("%d \t", sum[i][j]);
+            printf("%d ", sum[i][j]);
         }
-        printf("\n"); 
+        printf("\n");
     }
 
     return 0;
